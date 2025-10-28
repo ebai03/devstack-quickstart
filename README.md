@@ -1,4 +1,4 @@
-## Guía de Inicio Rápido para DevStack
+# Guía de Inicio Rápido para DevStack
 DevStack es una serie de scripts extensibles utilizados para crear rápidamente un entorno completo de OpenStack basado en las últimas versiones de todo desde git master. Se utiliza de forma interactiva como entorno de desarrollo y como base para gran parte de las pruebas funcionales del proyecto OpenStack.
 
 El código fuente está disponible en: https://opendev.org/openstack/devstack
@@ -19,6 +19,8 @@ Si no se está usando una imagen en la nube, se puede crear un usuario stack sep
 ```bash
 sudo useradd -s /bin/bash -d /opt/stack -m stack
 ```
+
+![img1](/img/sc1.png)
 
 Asegurar que el directorio home del usuario stack tenga permisos de ejecución para todos, ya que las distribuciones basadas en RHEL lo crean con 700 y Ubuntu 21.04+ con 750, lo que puede causar problemas durante el despliegue:
 
@@ -80,6 +82,7 @@ Las IPs flotantes estarán disponibles y las instancias tendrán acceso al mundo
 
 Al finalizar la instalación, el script mostrará las direcciones sobre las que trabaja Horizon (GUI web):
 
+![img2](/img/sc2.png)
 
 Finalmente se deben cargar las variables de entorno necesarias para que la OpenStack CLI se autentique y conecte con los servicios de OpenStack:
 ```sh
@@ -90,8 +93,11 @@ source openrc admin admin
 
 1. **Acceso a Horizon**: La interfaz web de OpenStack permite administrar VMs, redes, volúmenes e imágenes.
 
+![img3](/img/sc3.png)
 
 2. **Línea de comandos**: Después de hacer source de openrc en el shell, se puede usar la herramienta de línea de comandos openstack para administrar el entorno devstack.
+
+![img4](/img/sc4.png)
 
 3. **Creación y acceso a VMs**: Es posible crear máquinas virtuales y acceder a ellas mediante SSH.
 
